@@ -1,0 +1,15 @@
+Изменения в index.html :
+скрипты загружаются асинхронно
+<script async src="stats.js"></script>
+<script async src="contacts.js"></script>
+
+Измнения в styles.css :
+1) добалено новое свойство для contacts
+scroll-behavior: smooth;
+2) чтобы всякий раз, когда пользователь прекращает прокрутку, браузер не возвращал её к точке привязки, удалено свойство 
+scroll-snap-type: y mandatory;
+
+Изменения в contacts.js :
+1) в stickyHeader просто записываем  Math.floor(contacts.scrollTop / 18)
+scrollTop измеряет расстояние от верха элемента до начала видимого контента.
+floor возвращает наибольшее целое число, меньшее или равное его числовому аргументу.
